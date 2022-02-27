@@ -49,7 +49,7 @@ class Main extends PluginBase implements Listener {
                         $form->setTitle("§l§bMenu-UI");
                         $form->addButton("§l§bnombre\n§fClick", 0, "textures/ui/icon_random");
                         $form->addButton("§l§bnombre\n§fClick", 0, "textures/ui/icon_random");
-                        $form->addButton("§l§bNombre\n§fClick", 0, "textures/items/icon_random");
+                        $form->addButton("§l§bNombre\n§fClick", 0, "textures/ui/icon_random");
                         $form->sendToPlayer($player);
                         return $form;
             }
