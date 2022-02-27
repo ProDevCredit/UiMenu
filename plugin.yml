@@ -3,7 +3,6 @@ version: 1.0
 main: credit\menu\main
 author: Credit
 api: 3.0.0
-depend: [FormAPIv1]
 
 commands:
      menu:
