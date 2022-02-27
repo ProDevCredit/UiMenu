@@ -1,5 +1,5 @@
 <?php
-namespace credit\vip;
+namespace credit\menu;
 
 use pocketmine\Server;
 
@@ -14,12 +14,12 @@ use pocketmine\event\Listener;
 
 class Main extends PluginBase implements Listener {
   public function onEnable(){
-        $this->getLogger()->info("§aBenticraft Vip menu Activado");
+        $this->getLogger()->info("menu Activado");
   }
 
   public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args): bool {
     switch($cmd->getName()){
-      case "vip":
+      case "menu":
       if($sender instanceof Player){
         $this->test($sender);
            } else {
@@ -35,21 +35,21 @@ class Main extends PluginBase implements Listener {
                 } 
                  switch($data){
                   case 0:
-                     $this->getServer()->dispatchCommand($player, "mw tp minavip");
+                     $this->getServer()->dispatchCommand($player, "say comando 1");
                      break;
                                                                            
                      case 1:
-                     $this->getServer()->dispatchCommand($player, "mw tp tiendavip");
+                     $this->getServer()->dispatchCommand($player, "say comando 2");
                      break;
                             case 2:
-                     $this->getServer()->dispatchCommand($player, "mw tp parcelasvip");
+                     $this->getServer()->dispatchCommand($player, "say comando 3");
                      break;
                        }
                     });
-                        $form->setTitle("§l§6Benti§fCraft §eVIP Menu");
-                        $form->addButton("§g§oMina Vip \n§fClick Para Ir", 0, "textures/items/diamond_pickaxe");
-                        $form->addButton("§g§oTienda Vip \n§fClick Para Ir", 0, "textures/items/gold_ingot");
-                        $form->addButton("§g§oParcelas Vip\n§fClick Para Ir", 0, "textures/items/iron_shovel");
+                        $form->setTitle("§l§bMenu-UI");
+                        $form->addButton("§l§bnombre\n§fClick", 0, "textures/ui/icon_random");
+                        $form->addButton("§l§bnombre\n§fClick", 0, "textures/ui/icon_random");
+                        $form->addButton("§l§bNombre\n§fClick", 0, "textures/items/icon_random");
                         $form->sendToPlayer($player);
                         return $form;
             }
